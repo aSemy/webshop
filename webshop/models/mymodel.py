@@ -1,18 +1,39 @@
 from sqlalchemy import (
+    Table,
+    ForeignKey,
     Column,
-    Index,
     Integer,
     Text,
+    DateTime,
+    Numeric,
+    func
 )
+
+from sqlalchemy.orm import relationship
 
 from .meta import Base
 
+# join table between orders and its components
+association_table = Table('association', Base.metadata,
+                          Column('order_id', Integer, ForeignKey('orders.id')),
+                          Column('component_id', Integer, ForeignKey('components.id'))
+                          )
 
-class MyModel(Base):
-    __tablename__ = 'models'
+
+class Order(Base):
+    __tablename__ = 'orders'
     id = Column(Integer, primary_key=True)
-    name = Column(Text)
-    value = Column(Integer)
+    client_id = Column(Integer, nullable=False)
+    created = Column(DateTime, default=func.now(), nullable=False)
+    preferred_delivery_datetime = Column(DateTime)
+    components = relationship("Component", secondary=association_table)
 
 
-Index('my_index', MyModel.name, unique=True, mysql_length=255)
+class Component(Base):
+    __tablename__ = 'components'
+    id = Column(Integer, primary_key=True)
+    name = Column(Text, nullable=False)
+    price = Column(Numeric, nullable=False)
+
+
+

@@ -3,6 +3,8 @@ import transaction
 
 from pyramid import testing
 
+from datetime import datetime
+
 
 def dummy_request(dbsession):
     return testing.DummyRequest(dbsession=dbsession)
@@ -45,10 +47,21 @@ class TestMyViewSuccessCondition(BaseTest):
         super(TestMyViewSuccessCondition, self).setUp()
         self.init_database()
 
-        from .models import MyModel
+        from .models import (
+            Order,
+            Component
+        )
 
-        model = MyModel(name='one', value=55)
-        self.session.add(model)
+        # create test component
+        wheel = Component(name="Wheel", price=50.5)
+        self.session.add(wheel)
+
+        # create test order
+        order = Order(client_id=101,
+                      created=datetime(2018, 1, 1, 12, 14),
+                      preferred_delivery_datetime=datetime(2018, 2, 1, 16, 30),
+                      components=[wheel])
+        self.session.add(order)
 
     def test_passing_view(self):
         from .views.default import my_view

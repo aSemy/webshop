@@ -41,8 +41,8 @@ def main(argv=sys.argv):
     with transaction.manager:
         dbsession = get_tm_session(session_factory, transaction.manager)
 
-        wheel = Component(name="Wheel", price=50.5)
-        tyre = Component(name="Tyre", price=100)
-        light = Component(name="Light", price=7.5)
+        wheel = Component(name="Wheel", price="50.5")
+        tyre = Component(name="Tyre", price="100")
+        light = Component(name="Light", price="7.5")
         dbsession.bulk_save_objects([wheel, tyre, light])
-        #dbsession.add(wheel, tyre, light)
+        transaction.commit()

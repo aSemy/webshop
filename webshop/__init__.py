@@ -10,7 +10,6 @@ def main(global_config, **settings):
     config.include('.models')
     config.include('.routes')
 
-
     config.add_renderer('json2', custom_json_renderer())
 
     config.scan()

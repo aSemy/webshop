@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="246e9760-6e4c-4fb5-9222-10404712503f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop/models/meta.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/models/meta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop/api/ComponentController.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/api/ComponentController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webshop/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/webshop/routes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/webshop$initializedb.coverage" NAME="initializedb Coverage Results" MODIFIED="1538942346221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webshop/scripts" />
-    <SUITE FILE_PATH="coverage/webshop$webshop.coverage" NAME="webshop Coverage Results" MODIFIED="1538987978523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/webshop$webshop.coverage" NAME="webshop Coverage Results" MODIFIED="1538988834022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/webshop$Tests_in_setup_py.coverage" NAME="Tests in setup.py Coverage Results" MODIFIED="1538950768983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -97,7 +96,7 @@
           <entry key="jinja2" value="1" />
           <entry key="orders" value="1" />
           <entry key="png" value="1" />
-          <entry key="py" value="58" />
+          <entry key="py" value="59" />
           <entry key="sql" value="2" />
           <entry key="txt" value="1" />
         </counts>
@@ -109,7 +108,7 @@
           <entry key="Ini" value="4" />
           <entry key="Jinja2" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="58" />
+          <entry key="Python" value="59" />
           <entry key="Scratch" value="2" />
         </counts>
       </usages-collector>
@@ -117,7 +116,7 @@
         <counts>
           <entry key="ini" value="31" />
           <entry key="jinja2" value="43" />
-          <entry key="py" value="1953" />
+          <entry key="py" value="2000" />
           <entry key="sql" value="79" />
         </counts>
       </usages-collector>
@@ -125,7 +124,7 @@
         <counts>
           <entry key="Ini" value="31" />
           <entry key="Jinja2" value="43" />
-          <entry key="Python" value="1953" />
+          <entry key="Python" value="2000" />
           <entry key="Scratch" value="79" />
         </counts>
       </usages-collector>
@@ -135,16 +134,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/webshop/views/__init__.py">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/webshop/api/ComponentController.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" selection-start-line="15" selection-end-line="15" />
+                <state relative-caret-position="136">
+                  <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
                   </folding>
@@ -164,11 +158,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/webshop/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+                <state relative-caret-position="153">
+                  <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -213,23 +207,32 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/webshop/routes.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/webshop/views/default.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="561">
-                  <caret line="33" selection-start-line="33" selection-end-line="33" />
+                <state relative-caret-position="323">
+                  <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/webshop/api/OrderController.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="8" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -261,12 +264,13 @@
         <option value="$PROJECT_DIR$/webshop/scripts/initializedb.py" />
         <option value="$PROJECT_DIR$/webshop/templates/mytemplate.jinja2" />
         <option value="$PROJECT_DIR$/webshop/views/default.py" />
-        <option value="$PROJECT_DIR$/webshop/routes.py" />
-        <option value="$PROJECT_DIR$/webshop/api/ComponentController.py" />
         <option value="$PROJECT_DIR$/webshop/models/meta.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/webshop/__init__.py" />
         <option value="$PROJECT_DIR$/webshop/util/jsonhelpers.py" />
+        <option value="$PROJECT_DIR$/webshop/api/OrderController.py" />
+        <option value="$PROJECT_DIR$/webshop/api/ComponentController.py" />
+        <option value="$PROJECT_DIR$/webshop/routes.py" />
       </list>
     </option>
   </component>
@@ -355,6 +359,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Adam\PycharmProjects\webshop\webshop\api" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -500,8 +509,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3293623" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3994394" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3293623" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994394" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293623" />
@@ -535,7 +544,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/webshop/api/ComponentController.py</url>
-          <line>11</line>
+          <line>14</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
@@ -771,37 +780,10 @@
     <entry file="file://$PROJECT_DIR$/webshop/views/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/webshop/routes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webshop/views/default.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webshop/models/mymodel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webshop/api/ComponentController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -817,11 +799,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webshop/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+        <state relative-caret-position="153">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/views/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/api/OrderController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/api/ComponentController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webshop/routes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
         </state>
       </provider>
     </entry>

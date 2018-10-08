@@ -1,7 +1,10 @@
 webshop
 =======
 
-https://github.com/Pylons/pyramid-cookiecutter-alchemy
+
+Dependencies:
+    json serialisation - https://github.com/Pylons/pyramid-cookiecutter-alchemy
+    
 
 Getting Started
 ---------------

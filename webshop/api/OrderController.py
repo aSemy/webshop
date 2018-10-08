@@ -51,16 +51,9 @@ def order_create(request):
 
         # validate components exist
         invalid_component_ids = []
-
-        # request.dbsession.query(Component.id).filter(exists().where(Component.id == component_id))
-
         for component_id in request.json_body['component_ids']:
             if not request.dbsession.query(exists().where(Component.id == component_id)).scalar():
                 invalid_component_ids.append(component_id)
-
-        #     if not exists().where(Component.id == component_id):
-        #         invalid_component_ids.append(component_id)
-
         if len(invalid_component_ids) > 0:
             raise ValueError("Component IDs do not exist: %s" % invalid_component_ids)
 

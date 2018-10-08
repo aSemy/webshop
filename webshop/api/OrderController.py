@@ -18,7 +18,7 @@ import logging
 
 log = logging.getLogger(__name__)
 
-datetime_parse_format = "%Y%m%d_%H%M"  # year_month_day_hour_minute, e.g. 20181231_2359
+DATETIME_PARSE_FORMAT = "%Y%m%d_%H%M"  # year_month_day_hour_minute, e.g. 20181231_2359
 
 #
 # @view_config(context=Order)
@@ -48,11 +48,14 @@ def order_create(request):
         delivery_datetime_string = request.json_body.get('preferred_delivery_yyyyMMdd_HHmm')
         component_ids = request.json_body['component_ids']
 
+        # datetime is optional
+        delivery_datetime = None
+
         # start validating
 
         # TODO validate delivery date is in future
         if delivery_datetime_string:
-            delivery_struct_time = time.strptime(delivery_datetime_string, datetime_parse_format)
+            delivery_struct_time = time.strptime(delivery_datetime_string, DATETIME_PARSE_FORMAT)
             # convert struct_time to datetime
             delivery_datetime = datetime(*delivery_struct_time[:6])
             if not delivery_datetime:
@@ -69,12 +72,6 @@ def order_create(request):
             raise ValueError("Component IDs do not exist: %s" % invalid_component_ids)
 
         # finished validating
-
-        delivery_datetime = None
-        if delivery_datetime_string:
-            delivery_struct_time = time.strptime(delivery_datetime_string, datetime_parse_format)
-            # convert struct_time to datetime
-            delivery_datetime = datetime(*delivery_struct_time[:6])
 
         # create order
         new_order = Order()

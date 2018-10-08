@@ -5,6 +5,7 @@ webshop
 Dependencies:
     json serialisation - https://github.com/Pylons/pyramid-cookiecutter-alchemy
     
+Insominia API client can be used to make queries. Configuration file is here: https://github.com/aSemy/webshop/blob/master/webshop_insomnia.json
 
 Getting Started
 ---------------

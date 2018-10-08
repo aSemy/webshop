@@ -9,8 +9,8 @@ import logging
 log = logging.getLogger(__name__)
 
 
-@view_config(route_name='components', renderer='json')
-def my_view(request):
+@view_config(request_method='GET', route_name='components', renderer='json')
+def component_view(request):
     try:
         query = request.dbsession.query(Component)
     except DBAPIError as e:

@@ -14,6 +14,7 @@ from .meta import Base
 
 
 # # join table between orders and its components
+# TODO add this, and also add 'sale_price' and 'quantity'
 # class OrderedComponent(Base):
 #     __tablename__ = 'ordered_components'
 #     order_id = Column('order_id', Integer, ForeignKey('orders.id'), primary_key=True)

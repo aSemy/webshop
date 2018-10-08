@@ -2,6 +2,7 @@ import datetime
 from marshmallow import Schema
 from pyramid.httpexceptions import HTTPInternalServerError
 from pyramid.renderers import JSON
+import enum
 
 
 class SchemaJsonRenderer(JSON):
@@ -45,7 +46,12 @@ def custom_json_renderer():
     def time_adapter(obj, request):
         return str(obj)
 
+    def enum_adapter(obj, request):
+        return obj.name
+
     json_renderer = SchemaJsonRenderer()
     json_renderer.add_adapter(datetime.datetime, datetime_adapter)
     json_renderer.add_adapter(datetime.time, time_adapter)
+    json_renderer.add_adapter(enum.Enum, enum_adapter)
+
     return json_renderer

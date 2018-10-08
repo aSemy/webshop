@@ -5,9 +5,10 @@ from sqlalchemy import (
     Integer,
     Text,
     DateTime,
-    Enum,
     func
 )
+
+import sqlalchemy
 
 import enum
 from enum import unique
@@ -16,11 +17,20 @@ from sqlalchemy.orm import relationship
 
 from .meta import Base
 
+#
+# class EnumAutoName():
+
 
 @unique
 class OrderStatus(enum.Enum):
+    def _generate_next_value_(name, start, count, last_values):
+        return name
     CREATED = enum.auto()
+    PROCESSED = enum.auto()
+    READY_FOR_DELIVERY = enum.auto()
+    OUT_FOR_DELIVERY = enum.auto()
     DELIVERED = enum.auto()
+    CANCELLED = enum.auto()
 
 # # join table between orders and its components
 # TODO add this, and also add 'sale_price' and 'quantity'
@@ -42,7 +52,7 @@ class Order(Base):
     id = Column(Integer, primary_key=True)
     client_id = Column(Integer, nullable=False)
     created = Column(DateTime, default=func.now(), nullable=False)
-    status = Column(Enum(OrderStatus), default=OrderStatus.CREATED)
+    status = Column(sqlalchemy.Enum(OrderStatus), default=OrderStatus.CREATED)
     preferred_delivery_datetime = Column(DateTime)
     components = relationship("Component", secondary=ordered_components_table)
     # TODO add status enum (ordered, delivered)

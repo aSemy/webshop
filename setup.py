@@ -9,6 +9,7 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
 requires = [
+    'marshmallow >= 2', # http://codelike.com/blog/2015/07/19/how-to-serialize-sqlalchemy-objects-to-json-in-pyramid/
     'plaster_pastedeploy',
     'pyramid >= 1.9a',
     'pyramid_debugtoolbar',

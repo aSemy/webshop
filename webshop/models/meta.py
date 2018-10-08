@@ -12,5 +12,19 @@ NAMING_CONVENTION = {
     "pk": "pk_%(table_name)s"
 }
 
-metadata = MetaData(naming_convention=NAMING_CONVENTION)
-Base = declarative_base(metadata=metadata)
+
+class Base(object):
+    metadata = MetaData(naming_convention=NAMING_CONVENTION)
+
+
+    def __json__(self, request):
+        json_exclude = getattr(self, '__json_exclude__', set())
+        return {key: value for key, value in self.__dict__.items()
+                # Do not serialize 'private' attributes
+                # (SQLAlchemy-internal attributes are among those, too)
+                if not key.startswith('_')
+                and key not in json_exclude}
+
+
+Base = declarative_base(cls=Base)
+

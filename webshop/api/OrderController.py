@@ -47,18 +47,22 @@ def order_create(request):
 
         # start validating
 
+        # TODO validate delivery date is in future
+
         # validate components exist
         invalid_component_ids = []
 
-
         # request.dbsession.query(Component.id).filter(exists().where(Component.id == component_id))
 
-        # for component_id in request.json_body['component_ids']:
+        for component_id in request.json_body['component_ids']:
+            if not request.dbsession.query(exists().where(Component.id == component_id)).scalar():
+                invalid_component_ids.append(component_id)
+
         #     if not exists().where(Component.id == component_id):
         #         invalid_component_ids.append(component_id)
-        #
-        # if len(invalid_component_ids) > 0:
-        #     raise ValueError("Component IDs do not exist: %s" % invalid_component_ids)
+
+        if len(invalid_component_ids) > 0:
+            raise ValueError("Component IDs do not exist: %s" % invalid_component_ids)
 
         # finished validating
 
@@ -66,8 +70,9 @@ def order_create(request):
         valid_components = []
         # fetch components from the database
         for component_id in request.json_body['component_ids']:
-            component = request.dbsession.query(Component).filter_by(id=component_id).first();
-            valid_components.append(component)
+            if request.dbsession.query(exists().where(Component.id == component_id)).scalar():
+                component = request.dbsession.query(Component).filter_by(id=component_id).first();
+                valid_components.append(component)
 
         # add valid components to the order
         new_order.components.extend(valid_components)
@@ -78,5 +83,5 @@ def order_create(request):
         return Response("Database error", content_type='text/plain', status=500)
     except ValueError as e:
         log.error(str(e))
-        return Response("Component ID error", content_type='text/plain', status=500)
+        return Response("Component ID error. %s" % str(e), content_type='text/plain', status=500)
     return Response(status=200)

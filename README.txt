@@ -37,3 +37,26 @@ Getting Started
 - Run your project.
 
     env/bin/pserve development.ini
+    
+Endpoints 
+---------
+
+/components
+view components
+
+/orders
+view orders
+
+/orders/create
+Arguments: 
+    - client id (to record which client has made this order)
+    - component ids (an array of valid component ids)
+    - preferred delivery time (optional. in format yearMonthDay_HourMinute)
+    
+E.g.
+{
+	"client_id" : 2,
+	"component_ids" : [1],
+	"preferred_delivery_yyyyMMdd_HHmm" : "20190201_0000"
+}
+
